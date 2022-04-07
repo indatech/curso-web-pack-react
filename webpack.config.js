@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
-const { cleanWebpackPlugin } = require('clean-webpack-plugin').CleanWebpackPlugin
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
    mode: 'production',
@@ -53,7 +53,7 @@ module.exports = {
       new MiniCssExtractPlugin({
          filename: '[name].css'
       }),
-      new cleanWebpackPlugin(),
+      new CleanWebpackPlugin(),
    ],
    optimization: {
       minimize: true,
